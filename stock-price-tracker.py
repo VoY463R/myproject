@@ -8,11 +8,11 @@ COMPANY_NAME = "Tesla Inc"
 STOCK_ENDPOINT = "https://www.alphavantage.co/query"
 NEWS_ENDPOINT = "https://newsapi.org/v2/everything"
 
-api_key_stock = "0OKW4EZVCV1LBB8N"
-api_key_news = "cf3c34c747434163b1df41a3e6fdb89a"
+api_key_stock = ""
+api_key_news = ""
 
-account_sid = "AC63e3c3da06430894226fdc6fa5e388be"
-auth_token = "dd896d66a89d69dcf97a73d7622ad576"
+account_sid = ""
+auth_token = ""
 client = Client(account_sid, auth_token)
 
 per_change_increase = 0
@@ -61,7 +61,7 @@ if per_change_increase >=5:
         .create(
                 body=messages,
                 from_='+18149046140',
-                to='+48787943259'
+                to='+'
             )
     
 elif per_change_decrease >= 5:
@@ -71,7 +71,7 @@ elif per_change_decrease >= 5:
         .create(
                 body=messages,
                 from_='+18149046140',
-                to='+48787943259'
+                to='+'
             )
         
 else:
