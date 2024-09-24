@@ -10,15 +10,15 @@ def above_head(iss_latitude, iss_longitude, my_lat, my_long, sunrise, sunset, ti
     time_now_plus = time_now.hour - 2
     if my_lat-5 <= iss_latitude <= my_lat+5 and my_long-5 <= iss_longitude <= my_long+5:
         if time_now_plus > sunset or time_now_plus < sunrise:
-            my_email =  "kamil.tylka84@gmail.com"
-            password = "mkpjjwiikaxusqqw"
+            my_email =  ""
+            password = ""
 
             with smtplib.SMTP("smtp.gmail.com") as connection:
                 connection.starttls()
                 connection.login(user= my_email, password=password)
                 connection.sendmail(
                     from_addr=my_email, 
-                    to_addrs="kamil.tylka@yahoo.com", 
+                    to_addrs="", 
                     msg=f"Subject:LOOK ABOVE\nLook Above!."
                     )
     else:
